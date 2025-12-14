@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    container_name: haste-server
+    restart: unless-stopped
+    volumes:
+      - pastes-data:/var/data/pastes
+
+volumes:
+  pastes-data:
